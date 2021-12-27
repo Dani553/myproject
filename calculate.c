@@ -3,8 +3,7 @@
 #include <string.h> 
 #include "calculate.h"
 
-float
-Calculate(float Numeral, char Operation[4])
+float Calculate(float Numeral, char Operation[4])
 {
 float SecondNumeral;
 if(strncmp(Operation, "+", 1) == 0)
@@ -22,9 +21,7 @@ printf("Множитель: "); scanf("%f",&SecondNumeral); return(Numeral * Sec
 else if(strncmp(Operation, "/", 1) == 0)
 {
 printf("Делитель: "); scanf("%f",&SecondNumeral); if(SecondNumeral == 0)
-{
-
-
+printf("Для продолжения нажмите ESC", click);
 }
 else
 

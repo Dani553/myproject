@@ -24,7 +24,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps: 
       - name: Print all files in project
-        run: ll
+        run: ls -al
       
       - name: Print local enviroment 
         run: echo "This string is ${{env.Ver}}"
@@ -36,6 +36,7 @@ jobs:
           
   inform_serv:
     runs-on: windows
+    needs: inform_rep
     steps:
       - name: Print version of AWS
         run : aws --version

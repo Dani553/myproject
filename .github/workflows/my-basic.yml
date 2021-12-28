@@ -41,6 +41,6 @@ jobs:
       - name: Print version of AWS
         run : aws --version
       - name: Print string
-        run : "${{env.Var1}}"
+        run : echo "${{env.Var1}}"
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
    

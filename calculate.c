@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include <math.h> 
-#include <string.h> 
+#include <math.h>  
 #include "calculate.h"
 
 float Calculate(float Numeral, char Operation[4])
 {
 float SecondNumeral;
+float ThirdNumeral;
 if(strncmp(Operation, "+", 1) == 0)
 {
 printf("Второе слагаемое: "); scanf("%f",&SecondNumeral); return(Numeral + SecondNumeral);
@@ -21,7 +21,6 @@ printf("Множитель: "); scanf("%f",&SecondNumeral); return(Numeral * Sec
 else if(strncmp(Operation, "/", 1) == 0)
 {
 printf("Делитель: "); scanf("%f",&SecondNumeral); if(SecondNumeral == 0)
-printf("Для продолжения нажмите ESC", click);
 }
 else
 
@@ -32,6 +31,7 @@ return(Numeral / SecondNumeral);
 }
 else if(strncmp(Operation, "pow", 3) == 0)
 {
+if (strncmp(Operation, "pow", 2) == 0)
 printf("Степень: "); scanf("%f",&SecondNumeral); return(pow(Numeral, SecondNumeral));
 }
 else if(strncmp(Operation, "sqrt", 4) == 0)

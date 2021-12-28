@@ -35,7 +35,7 @@ jobs:
           MY_STRING: "My Nickname is Dani553"
           
   inform_serv:
-    runs-on: windows
+    runs-on: ubuntu-latest
     needs: inform_rep
     steps:
       - name: Print version of AWS

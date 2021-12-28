@@ -1,5 +1,7 @@
 #include <stdio.h> 
 #include "calculate.h"
+#include <string.h>
+#include "main.c"
 
 int main (void)
 {

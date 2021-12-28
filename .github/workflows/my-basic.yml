@@ -1,0 +1,45 @@
+# This is a basic workflow to help you get started with Actions
+
+name: MYGitHubAction
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+env:
+  Var1: "Hello world!"
+
+  # Allows you to run this workflow manually from the Actions tab
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  inform_rep:
+  # This workflow contains a single job called "build"
+  # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    env: 
+      Ver: "This project corporate by Daniyal A.M."
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps: 
+      - name: Print all files in project
+        run: ll
+      
+      - name: Print local enviroment 
+        run: echo "This string is ${{env.Ver}}"
+      
+      - name: Print Superlocal enviroment
+        run : echo "Different string is $MY_STRING"
+        env: 
+          MY_STRING: "My Nickname is Dani553"
+          
+  inform_serv:
+    runs-on: windows
+    steps:
+      - name: Print version of AWS
+        run : aws --version
+      - name: Print string
+        run : "${{env.Var1}}"
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+   

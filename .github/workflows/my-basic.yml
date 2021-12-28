@@ -24,7 +24,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps: 
       - name: Load files of repos
-        run: actions/checkout@v1
+        uses: actions/checkout@v1
       - name: Print all files in project
         run: ls -al
       
